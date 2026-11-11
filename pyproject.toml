@@ -1,0 +1,39 @@
+[project]
+name = "supply-chain-email-agent"
+version = "0.1.0"
+description = "Extracts supplier lead-time commitments from emails and writes them to a mock ERP via MCP."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "sqlmodel>=0.0.22",
+    "pydantic-settings>=2.4",
+    "fastmcp>=4.1.7",
+    "httpx>=0.28.1",
+    "anthropic>=2.8.0",
+    "openai>=3.49.0",
+    "pydantic-ai-slim[anthropic,mcp,openai]>=2.66.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.24", "ruff>=0.6"]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*", "src*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."] # import app/ and src/ from the project root, installed or not
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

@@ -1,0 +1,18 @@
+{
+  "id": "15_part_not_on_po",
+  "description": "The part isn't on the PO the email names: not written.",
+  "tags": [
+    "no-po"
+  ],
+  "email": "From: Acme Components <sales@acme-components.com>\nTo: buyer@joby.aero\nSubject: PO 4500123456\n\nHi Dominik,\n\nPO 4500123456 / PN NB-4402: 3 weeks ARO.\n\nBest,\nSarah\nAcme Components\n",
+  "expected": {
+    "status": "needs_review",
+    "commitments": [
+      {
+        "po_number": "4500123456",
+        "part_number": "NB-4402",
+        "written": false
+      }
+    ]
+  }
+}

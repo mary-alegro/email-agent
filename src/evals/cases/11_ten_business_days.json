@@ -1,0 +1,23 @@
+{
+  "id": "11_ten_business_days",
+  "description": "Business days, full quantity.",
+  "tags": [
+    "business-days"
+  ],
+  "email": "From: NorthBay Fasteners <quotes@northbayfasteners.com>\nTo: buyer@joby.aero\nSubject: PO 4500999911 lead time\n\nHello,\n\nPN NB-4402: we can ship the full quantity 10 business days ARO.\n\nRegards,\nNorthBay Fasteners\n",
+  "expected": {
+    "status": "processed",
+    "commitments": [
+      {
+        "po_number": "4500999911",
+        "part_number": "NB-4402",
+        "written": true,
+        "review_status": "accepted",
+        "min_days": 10,
+        "max_days": 10,
+        "day_basis": "business",
+        "anchor": "ARO"
+      }
+    ]
+  }
+}

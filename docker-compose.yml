@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    image: supply-chain-email-agent:latest
+    ports:
+      - "${HOST_PORT:-8000}:8000" # e.g. HOST_PORT=8001 if a local dev server already uses 8000
+    # API keys and other settings (LLM_PROVIDER, LOG_LEVEL, ...) come from .env if present.
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: sqlite:////data/app.db # always the volume, whatever .env says
+    volumes:
+      - app-data:/data
+    restart: unless-stopped
+
+volumes:
+  app-data:

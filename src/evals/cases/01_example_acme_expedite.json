@@ -1,0 +1,34 @@
+{
+  "id": "01_example_acme_expedite",
+  "description": "Assignment example 1: firm 6-8 weeks plus an expedite option.",
+  "tags": [
+    "example"
+  ],
+  "email": "From: Acme Components <sales@acme-components.com>\nTo: buyer@joby.aero\nSubject: Re: PO 4500123456 / JT-8831 availability\n\nHi Dominik,\n\nThanks for the PO. For PN JT-8831 we can ship 50 units in 6–8 weeks ARO.\nIf you need it sooner, we can do an expedited build at 3 weeks ARO for +12% surcharge.\n\nBest,\nSarah\nAcme Components\n",
+  "expected": {
+    "status": "processed",
+    "commitments": [
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "written": true,
+        "review_status": "accepted",
+        "line_number": 10,
+        "kind": "duration",
+        "quantity": 50,
+        "min_days": 42,
+        "max_days": 56,
+        "day_basis": "calendar",
+        "anchor": "ARO"
+      },
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "is_option": true,
+        "written": false,
+        "min_days": 21,
+        "max_days": 21
+      }
+    ]
+  }
+}

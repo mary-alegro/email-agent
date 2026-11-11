@@ -1,0 +1,39 @@
+{
+  "id": "20_thread_hijack",
+  "description": "Newest message in a supplier thread comes from another domain with the supplier's display name: block.",
+  "tags": [
+    "fraud",
+    "thread"
+  ],
+  "email": "From: Acme Components <sales@acme-supply-orders.com>\nTo: buyer@joby.aero\nSubject: Re: PO 4500123456 / JT-8831 availability\n\nHi Dominik,\n\nConfirming we can ship PN JT-8831 in 6–8 weeks ARO for the full quantity.\nIf you can take a split shipment: 20 pcs in 3 weeks ARO, remainder in 6–8 weeks ARO.\n\nBest,\nSarah\n\n-----Original Message-----\nFrom: buyer@joby.aero\nSent: Tue, May 19, 2026 9:14 AM\nTo: Acme Components <sales@acme-components.com>\nSubject: Re: PO 4500123456 / JT-8831 availability\n\nHi Sarah,\n\nThanks. Can you confirm if there's any way to get the first 20 pcs sooner?\n\nRegards,\nDominik\n\n-----Original Message-----\nFrom: Acme Components <sales@acme-components.com>\nSent: Mon, May 18, 2026 4:02 PM\nTo: buyer@joby.aero\nSubject: Re: PO 4500123456 / JT-8831 availability\n\nHi Dominik,\n\nFor PO 4500123456 / PN JT-8831 our standard lead time is 6–8 weeks ARO.\n\nBest,\nSarah\n",
+  "expected": {
+    "status": "needs_review",
+    "flags": [
+      "display_name_impersonation",
+      "thread_sender_changed"
+    ],
+    "commitments": [
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "written": false,
+        "min_days": 42,
+        "max_days": 56
+      },
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "is_option": true,
+        "written": false,
+        "optional": true
+      },
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "is_option": true,
+        "written": false,
+        "optional": true
+      }
+    ]
+  }
+}

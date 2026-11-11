@@ -1,0 +1,19 @@
+{
+  "id": "13_quoted_commitment_still_valid",
+  "description": "The newest message only confirms the quoted commitment ('still valid').",
+  "tags": [
+    "thread"
+  ],
+  "email": "From: Acme Components <sales@acme-components.com>\nTo: buyer@joby.aero\nSubject: Re: PO 4500123456 / JT-8831\n\nHi Dominik,\n\nYes, the lead time below is still valid.\n\nBest,\nSarah\n\n-----Original Message-----\nFrom: Acme Components <sales@acme-components.com>\nSent: Mon, May 18, 2026 4:02 PM\nTo: buyer@joby.aero\nSubject: PO 4500123456 / JT-8831\n\nFor PO 4500123456 / PN JT-8831 we can ship in 4 weeks ARO.\n",
+  "expected": {
+    "commitments": [
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "written": true,
+        "min_days": 28,
+        "max_days": 28
+      }
+    ]
+  }
+}

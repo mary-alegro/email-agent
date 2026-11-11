@@ -1,0 +1,28 @@
+{
+  "id": "19_firm_split_with_remainder",
+  "description": "Firm split shipment: first 20 pcs, then the remainder (computed from the ERP line).",
+  "tags": [
+    "split"
+  ],
+  "email": "From: Acme Components <sales@acme-components.com>\nTo: buyer@joby.aero\nSubject: Re: PO 4500123456 / JT-8831\n\nHi Dominik,\n\nWe will ship the first 20 pcs of PN JT-8831 in 2 weeks ARO and the remainder in 6 weeks ARO.\n\nBest,\nSarah\nAcme Components\n",
+  "expected": {
+    "commitments": [
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "written": true,
+        "quantity": 20,
+        "min_days": 14,
+        "max_days": 14
+      },
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "written": true,
+        "quantity": 30,
+        "min_days": 42,
+        "max_days": 42
+      }
+    ]
+  }
+}

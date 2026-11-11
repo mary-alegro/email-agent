@@ -1,0 +1,11 @@
+From: AeroPlastics Ltd <support@aeroplastics.example>
+To: buyer@joby.aero
+Subject: Re: RFQ / PO TBD – lead time confirmation
+
+Hi,
+
+Assuming we receive drawing approval by EOW, we can deliver PN AP-1187 by June 15.
+If approval slips past next Tuesday, delivery moves out by 2 weeks.
+
+Thanks,
+AeroPlastics

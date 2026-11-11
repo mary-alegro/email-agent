@@ -1,0 +1,21 @@
+{
+  "id": "06_fraud_reply_to_redirect",
+  "description": "Reply-To redirects to a free-mail address: block the write.",
+  "tags": [
+    "fraud"
+  ],
+  "email": "From: Acme Components <sales@acme-components.com>\nReply-To: acme.components.billing@gmail.com\nTo: buyer@joby.aero\nSubject: Re: PO 4500123456 / JT-8831 availability\n\nHi Dominik,\n\nFor PN JT-8831 we can ship 50 units in 6–8 weeks ARO.\n\nBest,\nSarah\nAcme Components\n",
+  "expected": {
+    "status": "needs_review",
+    "flags": [
+      "reply_to_mismatch"
+    ],
+    "commitments": [
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "written": false
+      }
+    ]
+  }
+}

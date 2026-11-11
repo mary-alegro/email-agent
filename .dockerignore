@@ -1,0 +1,13 @@
+# Keep secrets, local state and bulky files out of the build context.
+.env
+.venv/
+data/
+eval-results/
+docs/
+*.pdf
+.git/
+**/__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store

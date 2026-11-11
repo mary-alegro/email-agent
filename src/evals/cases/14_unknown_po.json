@@ -1,0 +1,18 @@
+{
+  "id": "14_unknown_po",
+  "description": "PO number that doesn't exist in the ERP: never written, and never 'corrected' to another PO.",
+  "tags": [
+    "no-po"
+  ],
+  "email": "From: Acme Components <sales@acme-components.com>\nTo: buyer@joby.aero\nSubject: PO 4500777777\n\nHi Dominik,\n\nFor PO 4500777777, PN JT-8831: 6–8 weeks ARO.\n\nBest,\nSarah\nAcme Components\n",
+  "expected": {
+    "status": "needs_review",
+    "commitments": [
+      {
+        "po_number": "4500777777",
+        "part_number": "JT-8831",
+        "written": false
+      }
+    ]
+  }
+}

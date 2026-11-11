@@ -1,0 +1,35 @@
+{
+  "id": "02_example_northbay_partial",
+  "description": "Assignment example 2: split shipment pending buyer confirmation.",
+  "tags": [
+    "example",
+    "split"
+  ],
+  "email": "From: NorthBay Fasteners <quotes@northbayfasteners.com>\nTo: buyer@joby.aero\nSubject: PO 4500999911 – partial delivery plan\n\nHello,\n\nWe can commit to the following:\n– PN NB-4402: 20 pcs available to ship in 5 business days.\n– Remaining 80 pcs will ship in 25–30 business days after receipt of order.\n\nPlease confirm if partial shipment is acceptable.\n\nRegards,\nNorthBay Fasteners\n",
+  "expected": {
+    "status": "needs_review",
+    "commitments": [
+      {
+        "po_number": "4500999911",
+        "part_number": "NB-4402",
+        "written": true,
+        "review_status": "needs_review",
+        "quantity": 20,
+        "min_days": 5,
+        "max_days": 5,
+        "day_basis": "business"
+      },
+      {
+        "po_number": "4500999911",
+        "part_number": "NB-4402",
+        "written": true,
+        "review_status": "needs_review",
+        "quantity": 80,
+        "min_days": 25,
+        "max_days": 30,
+        "day_basis": "business",
+        "anchor": "ARO"
+      }
+    ]
+  }
+}

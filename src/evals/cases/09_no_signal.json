@@ -1,0 +1,12 @@
+{
+  "id": "09_no_signal",
+  "description": "No lead-time commitment at all: zero extractions, not a failure.",
+  "tags": [
+    "no-signal"
+  ],
+  "email": "From: Acme Components <sales@acme-components.com>\nTo: buyer@joby.aero\nSubject: Thanks for the call\n\nHi Dominik,\n\nThanks for the call today. We'll send the updated quote for the brackets next week.\n\nBest,\nSarah\nAcme Components\n",
+  "expected": {
+    "status": "no_signal",
+    "commitments": []
+  }
+}

@@ -1,0 +1,12 @@
+From: Acme Components <sales@acme-components.com>
+To: buyer@joby.aero
+Subject: Re: PO 4500123456 / JT-8831 availability
+
+Hi Dominik,
+
+Thanks for the PO. For PN JT-8831 we can ship 50 units in 6–8 weeks ARO.
+If you need it sooner, we can do an expedited build at 3 weeks ARO for +12% surcharge.
+
+Best,
+Sarah
+Acme Components

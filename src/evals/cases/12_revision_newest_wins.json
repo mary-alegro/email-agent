@@ -1,0 +1,23 @@
+{
+  "id": "12_revision_newest_wins",
+  "description": "Thread where the newest message revises the lead time: only the new value is written.",
+  "tags": [
+    "thread",
+    "revision"
+  ],
+  "email": "From: Acme Components <sales@acme-components.com>\nTo: buyer@joby.aero\nSubject: Re: PO 4500123456 / JT-8831 lead time\n\nHi Dominik,\n\nUpdate: due to a raw material shortage, PN JT-8831 is now 10–12 weeks ARO.\n\nBest,\nSarah\n\n-----Original Message-----\nFrom: Acme Components <sales@acme-components.com>\nSent: Mon, May 18, 2026 4:02 PM\nTo: buyer@joby.aero\nSubject: Re: PO 4500123456 / JT-8831 lead time\n\nHi Dominik,\n\nFor PO 4500123456 / PN JT-8831 our lead time is 6–8 weeks ARO.\n\nBest,\nSarah\n",
+  "expected": {
+    "status": "processed",
+    "commitments": [
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "written": true,
+        "review_status": "accepted",
+        "min_days": 70,
+        "max_days": 84,
+        "anchor": "ARO"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "10_in_stock_this_friday",
+  "description": "In stock, ships this Friday (relative date).",
+  "tags": [
+    "in-stock",
+    "relative-date"
+  ],
+  "email": "From: Acme Components <sales@acme-components.com>\nTo: buyer@joby.aero\nSubject: Re: PO 4500123456 / JT-9002\n\nHi Dominik,\n\nGood news: PN JT-9002 is in stock and we can ship this Friday.\n\nBest,\nSarah\nAcme Components\n",
+  "expected": {
+    "commitments": [
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-9002",
+        "written": true,
+        "line_number": 20,
+        "kind": "in_stock"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "05_fraud_lookalike_bank_change",
+  "description": "Lookalike sender domain plus new bank details: block every write.",
+  "tags": [
+    "fraud"
+  ],
+  "email": "From: Acme Components <sales@acme-cornponents.com>\nTo: buyer@joby.aero\nSubject: Re: PO 4500123456 / JT-8831 availability\n\nHi Dominik,\n\nConfirming PN JT-8831 will ship in 6–8 weeks ARO for the full quantity.\n\nPlease also note that we have updated our bank details. Kindly remit all future\npayments for this PO to the account below:\nIBAN: GB33 BUKB 2020 1555 5555 55\n\nBest,\nSarah\nAcme Components\n",
+  "expected": {
+    "status": "needs_review",
+    "flags": [
+      "lookalike_domain",
+      "payment_instruction_change"
+    ],
+    "commitments": [
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "written": false,
+        "min_days": 42,
+        "max_days": 56
+      }
+    ]
+  }
+}

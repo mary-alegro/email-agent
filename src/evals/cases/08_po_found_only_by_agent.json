@@ -1,0 +1,24 @@
+{
+  "id": "08_po_found_only_by_agent",
+  "description": "'purchase order 4500999911' and no part number: the regex finds nothing; the agent must look the PO up.",
+  "tags": [
+    "agent-tools"
+  ],
+  "email": "From: NorthBay Fasteners <quotes@northbayfasteners.com>\nTo: buyer@joby.aero\nSubject: Your fastener order\n\nHello,\n\nRegarding purchase order 4500999911: the full quantity will ship 3 weeks after receipt of order.\n\nRegards,\nNorthBay Fasteners\n",
+  "expected": {
+    "status": "processed",
+    "commitments": [
+      {
+        "po_number": "4500999911",
+        "part_number": "NB-4402",
+        "written": true,
+        "review_status": "accepted",
+        "line_number": 10,
+        "min_days": 21,
+        "max_days": 21,
+        "day_basis": "calendar",
+        "anchor": "ARO"
+      }
+    ]
+  }
+}

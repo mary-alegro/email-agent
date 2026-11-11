@@ -1,0 +1,31 @@
+{
+  "id": "16_two_lines_one_email",
+  "description": "Two lines of the same PO in one email: each written to its own line.",
+  "tags": [
+    "multi-line"
+  ],
+  "email": "From: Acme Components <sales@acme-components.com>\nTo: buyer@joby.aero\nSubject: PO 4500123456 lead times\n\nHi Dominik,\n\nFor PO 4500123456:\n- PN JT-8831: 6 weeks ARO.\n- PN JT-9002: 3 weeks ARO.\n\nBest,\nSarah\nAcme Components\n",
+  "expected": {
+    "status": "processed",
+    "commitments": [
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-8831",
+        "written": true,
+        "review_status": "accepted",
+        "line_number": 10,
+        "min_days": 42,
+        "max_days": 42
+      },
+      {
+        "po_number": "4500123456",
+        "part_number": "JT-9002",
+        "written": true,
+        "review_status": "accepted",
+        "line_number": 20,
+        "min_days": 21,
+        "max_days": 21
+      }
+    ]
+  }
+}

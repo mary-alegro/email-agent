@@ -1,0 +1,26 @@
+{
+  "id": "03_example_rfq_no_po",
+  "description": "Assignment example 3: no PO yet, conditional date; nothing may be written.",
+  "tags": [
+    "example",
+    "no-po"
+  ],
+  "email": "From: AeroPlastics Ltd <support@aeroplastics.example>\nTo: buyer@joby.aero\nSubject: Re: RFQ / PO TBD – lead time confirmation\n\nHi,\n\nAssuming we receive drawing approval by EOW, we can deliver PN AP-1187 by June 15.\nIf approval slips past next Tuesday, delivery moves out by 2 weeks.\n\nThanks,\nAeroPlastics\n",
+  "expected": {
+    "status": "needs_review",
+    "commitments": [
+      {
+        "po_number": null,
+        "part_number": "AP-1187",
+        "written": false,
+        "kind": "absolute_date"
+      },
+      {
+        "po_number": null,
+        "part_number": "AP-1187",
+        "written": false,
+        "optional": true
+      }
+    ]
+  }
+}
